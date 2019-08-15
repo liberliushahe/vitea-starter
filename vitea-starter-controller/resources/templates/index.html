@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>EAPI网关微服务</title>
+<style>
+#table{
+marign:0 auto;
+width:90%;
+}
+td{border:solid 1px #000;padding:10px;}
+</style>
+</head>
+<body>
+<div style="text-align:center">
+<div>
+<head>
+<h2>欢迎使用EAPI网关微服务</h2>
+<hr/>
+</head>
+<table id="table" cellspacing="0px" cellpadding="0" align="center">
+<tr>
+<th></th>
+</tr>
+<tr>
+<td>服务状态:</td>
+<td style="color:#32CD32;">服务正常启动</td>
+</tr>
+<tr>
+<td>微服务简介:</td>
+<td>
+<p>整合其他接口数据统一化之后对内部系统提供接口服务
+提供restful类型接口webservice接口
+</p>
+</td>
+</tr>
+<tr>
+<td>端口:</td>
+<td>9999</td>
+</tr>
+<tr>
+<td>提供服务:</td>
+<td>restful,webservice接口,swagger接口文档,oauth接口授权访问</td>
+</tr>
+<tr>
+<td>webservice地址:</td>
+
+
+<td>http://<span >${ip}</span>:9999/webservice</td>
+</tr>
+
+<tr>
+<td>api接口token获取地址:</td>
+<td>http://<span >${ip}</span>:9999/oauth/token?grant_type=client_credentials&scope=select&client_id=XXX&client_secret=XXX</td>
+</tr>
+<tr>
+<td>接口文档地址:</td>
+<td>http://<span >${ip}</span>:9999/swagger-ui.html</td>
+</tr>
+</table>
+<p>Copyright © 2016-2018 LiushaHe.version1.0</p>
+
+</div>
+</div>
+</body>
+</html>
