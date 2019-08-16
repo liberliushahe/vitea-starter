@@ -10,6 +10,7 @@ import com.vitea.starter.model.User;
  *
  */
 public interface UserService{
+	
 	/**
 	 * 登录方法
 	 * @param username
