@@ -10,9 +10,13 @@
 	<artifactId>vitea-starter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>vitea-starter</name>
-	<description> project for Spring Boot</description>
+	<description>Distributed Interface Service System</description>
 	<packaging>pom</packaging>
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+		<maven.test.skip>true</maven.test.skip>
 		<java.version>1.8</java.version>
 		<spring-boot-admin.version>2.1.5</spring-boot-admin.version>
 		<springfox-swagger2>2.9.2</springfox-swagger2>
@@ -125,7 +129,6 @@
 	<modules>
 		<module>vitea-starter-api</module>
 		<module>vitea-starter-service</module>
-		<module>vitea-starter-model</module>
 		<module>vitea-starter-controller</module>
 		<module>vitea-starter-monitor</module>
 		<module>vitea-starter-core</module>
@@ -133,28 +136,41 @@
 		<module>vitea-starter-cache</module>
 		<module>vitea-starter-dao</module>
 		<module>vitea-starter-message</module>
- 
-	 <module>vitea-starter-codegen</module>
-	 <module>vitea-starter-config</module>
+	    <module>vitea-starter-codegen</module>
+	    <module>vitea-starter-config</module>
+	    <module>vitea-starter-model</module>
 	</modules>
+	<developers>
+		<developer>
+			<id>LSH</id>
+			<name>liushahe</name>
+			<email>1540077031@qq.com</email>
+			<url>https://github.com/liberliushahe</url>
+		</developer>
+	</developers>
 	<build>
 		<plugins>
+		<!-- Javadoc -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+			
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-				</configuration>
-			</plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skipTests>true</skipTests>    <!--默认关掉单元测试 -->
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
 </project>

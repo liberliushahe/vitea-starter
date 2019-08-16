@@ -1,8 +1,10 @@
 package com.vitea.starter.dao.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.vitea.starter.model.User;
+import com.vitea.starter.model.Staff;
 
-public interface UserMapper extends BaseMapper<User> {
+public interface StaffMapper extends BaseMapper<Staff> {
+	
+	public boolean login();
 
 }

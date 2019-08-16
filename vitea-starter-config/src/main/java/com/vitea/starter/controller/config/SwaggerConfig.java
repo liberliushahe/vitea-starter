@@ -44,7 +44,7 @@ public class SwaggerConfig{
      .apiInfo(ApiInfo())
      .groupName("用户管理")
      .select()
-     .apis(RequestHandlerSelectors.basePackage("com.vitea.starter.controller.user"))
+     .apis(RequestHandlerSelectors.basePackage("com.vitea.starter.controller.staff"))
      .paths(PathSelectors.any())
      .build();
     } 

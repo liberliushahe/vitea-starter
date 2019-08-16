@@ -67,6 +67,11 @@
 		</dependency>
 		<dependency>
 			<groupId>com.vitea</groupId>
+			<artifactId>vitea-starter-model</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vitea</groupId>
 			<artifactId>vitea-starter-config</artifactId>
 			<version>${project.version}</version>
 		</dependency>
@@ -80,6 +85,25 @@
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
 		</dependency>
-		
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<mainClass>com.vitea.starter.ViteaStarterControllerApplication</mainClass>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
