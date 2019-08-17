@@ -60,7 +60,7 @@ public class SwaggerConfig{
     } 
     private ApiInfo ApiInfo() {
         return new ApiInfoBuilder()
-                .title("接口文档")
+                .title("vitea-starter接口文档")
                 .description("接口文档")
                 .version("1.0.0")
                 .termsOfServiceUrl("")
