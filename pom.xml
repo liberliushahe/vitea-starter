@@ -22,7 +22,7 @@
 		<springfox-swagger2>2.9.2</springfox-swagger2>
 		<swagger-bootstrap-ui>1.9.3</swagger-bootstrap-ui>
 		<dubbo.springboot.version>2.7.1</dubbo.springboot.version>
-		<fastjson.version>1.2.47</fastjson.version>
+		<fastjson.version>1.2.83</fastjson.version>
 		<hutool.version>4.6.1</hutool.version>
 		<spring-boot-admin.version>2.1.5</spring-boot-admin.version>
 		<zookeeper.version>3.4.11</zookeeper.version>
